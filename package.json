@@ -1,0 +1,35 @@
+{
+  "name": "arora_test",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug --dist-dir public --no-source-maps --no-cache",
+    "lint": "npx stylelint **/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Voloshin-Sergei/ARORA_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Voloshin-Sergei/ARORA_test/issues"
+  },
+  "homepage": "https://github.com/Voloshin-Sergei/ARORA_test#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "2.3.2",
+    "@parcel/transformer-sass": "2.3.2",
+    "parcel": "2.3.2",
+    "stylelint": "14.6.0",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-standard-scss": "3.0.0",
+    "stylelint-order": "5.0.0",
+    "stylelint-scss": "4.2.0"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.4"
+  }
+}
