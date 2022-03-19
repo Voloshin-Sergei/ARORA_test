@@ -1,13 +1,4 @@
-::placeholder {
-  color: gray;
-}
-
-.image {
-  border-radius: 2px;
-  background-image: url();
-}
-@media (min-resolution: 2dppx) {
-  .image {
-    background-image: url();
-  }
-}
+@import 'settings';
+@import 'variables';
+@import 'mixins';
+@import 'components/header';

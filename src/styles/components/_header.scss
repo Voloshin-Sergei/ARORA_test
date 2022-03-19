@@ -1,0 +1,38 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 6.4rem 0;
+  background-color: $bg_color-light;
+}
+
+.logo {
+  margin-right: 11.3rem;
+}
+
+.locations {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.location {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+
+  &__icon {
+    margin-right: 0.8rem;
+  }
+
+  &__place {
+    @include text($main_color, 400, 1.2rem, 1.6rem);
+  }
+
+  &__time {
+    @include text($text_color-secondary, 400, 1.2rem, 1.6rem);
+  }
+
+  &__phone {
+    @include text($text_color-main, 700, 1.8rem, 2.4rem);
+  }
+}
