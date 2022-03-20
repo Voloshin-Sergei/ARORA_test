@@ -1,0 +1,122 @@
+.dish {
+  position: relative;
+  display: flex;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  max-width: 86.1rem;
+
+  margin-bottom: 4rem;
+
+  &__img {
+    height: auto;
+    width: auto;
+    object-fit: cover;
+  }
+
+  &__label {
+    position: absolute;
+    top: 1.6rem;
+    left: 1.6rem;
+    padding: 0.7rem 1.6rem;
+    box-shadow: 0px 0.1rem 0.6rem rgba(0, 0, 0, 0.24), 0px 0.6rem 1.6rem rgba(0, 0, 0, 0.32);
+    border-radius: 1.6rem;
+
+    &--new {
+      @include text($bg_color-light, 500, 1.4rem, 1.8rem);
+      background: $label_color-new;
+      text-transform: uppercase;
+    }
+
+    &--action {
+      @include text($text_color-dark, 500, 1.4rem, 1.8rem);
+      background: $label_color-action;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1.6rem 1.6rem 0.5rem 4rem;
+    background: $secondary_color;
+    border-radius: 0 0.8rem 0.8rem 0;
+    width: 100%;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
+
+  &__title {
+    @include text($text_color-main, 700, 2.2rem, 3.2rem);
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    @include text($text_color-secondary, 400, 1.4rem, 2rem);
+    padding-bottom: 2.4rem;
+  }
+}
+
+.cost {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  align-self: flex-end;
+
+  &__pice-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  &__sale-price,
+  &__sale-total-price {
+    @include text($text_color-light, 700, 1.8rem, 2.4rem);
+  }
+
+  &__price,
+  &__total-price {
+    @include text($text_color-dark, 700, 1.8rem, 2.4rem);
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $bg_color-light;
+  border: 0.2rem solid $main_color;
+  border-radius: 3rem;
+
+  &__minus,
+  &__count,
+  &__plus {
+    @include text($text_color-secondary, 500, 1.8rem, 2.4rem);
+    text-align: center;
+  }
+
+  &__minus,
+  &__plus {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__minus {
+    border-right: 0.2rem solid $main_color;
+    padding: 1rem 1.2rem 1rem 2rem;
+  }
+
+  &__plus {
+    border-left: 0.2rem solid $main_color;
+    padding: 1rem 2rem 1rem 1.2rem;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    min-width: 5.2rem;
+  }
+}

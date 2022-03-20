@@ -1,0 +1,5 @@
+section.gifts
+  h2.gifts__title Подарки
+  include _dish-card.pug
+  each item in [{'title': 'Морс "Смородина"', 'desc': 'Морс "Смородина", 1 л', 'img': '6', 'label': 'Подарок'}]
+    +dish(item)

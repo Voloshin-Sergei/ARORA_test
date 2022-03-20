@@ -1,0 +1,32 @@
+.sidebar {
+  background: $bg_color-light;
+  box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.25), 0px 0px 0.4rem rgba(0, 0, 0, 0.16),
+    0px 0.4rem 0.6rem rgba(0, 0, 0, 0.16);
+  border-radius: 0.8rem;
+  padding: 4rem;
+
+  &__points {
+    @include text($text_color-dark, 700, 2.2rem, 3.2rem);
+    margin-bottom: 1.3rem;
+  }
+
+  &__info {
+    @include text($text_color-dark, 400, 1.4rem, 2rem);
+    margin-bottom: 2.5rem;
+  }
+
+  &__caution {
+    @include text($text_color-dark, 400, 1.4rem, 2rem);
+    margin-bottom: 4rem;
+  }
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include text($text_color-dark, 700, 2.2rem, 3.2rem);
+    margin-bottom: 1.6rem;
+  }
+}
