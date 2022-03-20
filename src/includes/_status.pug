@@ -1,0 +1,5 @@
+section.container.status__container
+  ul.status-list
+    each item in [{"title": "Корзина", "active": true}, {"title": "Оформление заказа", "active": false}, {"title": "Готово", "active": false}]
+      li.status-list__item
+        h2.status-list__info(class= item.active == true ? 'status-list__info--active' : '')= item.title

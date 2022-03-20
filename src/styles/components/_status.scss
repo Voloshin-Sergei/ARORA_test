@@ -1,0 +1,35 @@
+.status__container {
+  padding: 0 6.4rem 4rem;
+  background-color: $bg_color-light;
+}
+
+.status-list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  max-width: 93.7rem;
+
+  &::after {
+    position: absolute;
+    bottom: 1.8rem;
+    z-index: -1;
+    width: 100%;
+    border-bottom: 4px dotted $text_color-light;
+    content: '';
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0 2rem;
+    background: $bg_color-light;
+  }
+
+  &__info {
+    @include text($text_color-light, 700, 3rem, 4.4rem);
+
+    &--active {
+      color: $text_color-main;
+    }
+  }
+}
