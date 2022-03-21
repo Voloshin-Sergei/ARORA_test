@@ -4,6 +4,9 @@
     0px 0.4rem 0.6rem rgba(0, 0, 0, 0.16);
   border-radius: 0.8rem;
   padding: 4rem;
+  max-width: 41.1rem;
+  height: auto;
+  align-self: flex-start;
 
   &__points {
     @include text($text_color-dark, 700, 2.2rem, 3.2rem);
@@ -19,6 +22,21 @@
     @include text($text_color-dark, 400, 1.4rem, 2rem);
     margin-bottom: 4rem;
   }
+
+  &__coast {
+    @include text($text_color-dark, 700, 1.8rem, 2.4rem);
+    margin-bottom: 4rem;
+  }
+
+  &__sale {
+    color: $text_color-light;
+    text-decoration: line-through;
+  }
+
+  &__btn {
+    @include text($bg_color-light, 500, 1.8rem, 2.4rem);
+    @include btn-colored(2rem);
+  }
 }
 
 .promo {
@@ -28,5 +46,19 @@
   &__title {
     @include text($text_color-dark, 700, 2.2rem, 3.2rem);
     margin-bottom: 1.6rem;
+  }
+
+  &__input {
+    border: 0.2rem solid #808080;
+    border-radius: 3rem;
+    padding: 0.8rem 1.6rem;
+    @include text($text_color-light, 400, 1.6rem, 2.4rem);
+    background: $bg_color-light;
+    margin-bottom: 1.6rem;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    margin-bottom: 4rem;
   }
 }
