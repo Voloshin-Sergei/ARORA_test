@@ -2,9 +2,8 @@
   padding: 0.8rem 3.2rem;
   background: $bg_color-light;
   border: 0.2rem solid $main_color;
-  box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.2), 0px 0px 0.4rem rgba(0, 0, 0, 0.16),
-    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.16);
   border-radius: 4rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0 0 0 / 20%), 0 0 0.4rem rgba(0 0 0 / 16%), 0 0.2rem 0.4rem rgba(0 0 0 / 16%);
 
   &--regular {
     @include text($main_color, 400, 1.6rem, 2.4rem);

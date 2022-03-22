@@ -1,11 +1,13 @@
 .content {
   &__container {
-    padding: 0 6.4rem 6.4rem 6.4rem;
+    padding: 0 6.4rem 6.4rem;
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
   }
+
   &__column-left {
     margin-right: 4rem;
   }

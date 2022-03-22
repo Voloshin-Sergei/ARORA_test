@@ -1,15 +1,14 @@
 .dish {
   position: relative;
   display: flex;
-  border-radius: 0.8rem;
-  overflow: hidden;
   max-width: 86.1rem;
-
   margin-bottom: 4rem;
+  overflow: hidden;
+  border-radius: 0.8rem;
 
   &__img {
-    height: auto;
     width: auto;
+    height: auto;
     object-fit: cover;
   }
 
@@ -18,29 +17,31 @@
     top: 1.6rem;
     left: 1.6rem;
     padding: 0.7rem 1.6rem;
-    box-shadow: 0px 0.1rem 0.6rem rgba(0, 0, 0, 0.24), 0px 0.6rem 1.6rem rgba(0, 0, 0, 0.32);
     border-radius: 1.6rem;
+    box-shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 24%), 0 0.6rem 1.6rem rgb(0 0 0 / 32%);
 
     &--new {
       @include text($bg_color-light, 500, 1.4rem, 1.8rem);
-      background: $label_color-new;
+
       text-transform: uppercase;
+      background: $label_color-new;
     }
 
     &--action {
       @include text($text_color-dark, 500, 1.4rem, 1.8rem);
+
       background: $label_color-action;
     }
   }
 
   &__info {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
+    width: 100%;
     padding: 1.6rem 1.6rem 0.5rem 4rem;
     background: $secondary_color;
     border-radius: 0 0.8rem 0.8rem 0;
-    width: 100%;
   }
 
   &__btn {
@@ -51,19 +52,21 @@
 
   &__title {
     @include text($text_color-main, 700, 2.2rem, 3.2rem);
+
     margin-bottom: 1rem;
   }
 
   &__description {
     @include text($text_color-secondary, 400, 1.4rem, 2rem);
+
     padding-bottom: 2.4rem;
   }
 }
 
 .cost {
   display: flex;
-  align-items: center;
   gap: 1.6rem;
+  align-items: center;
   align-self: flex-end;
 
   &__pice-wrapper {
@@ -95,6 +98,7 @@
   &__count,
   &__plus {
     @include text($text_color-secondary, 500, 1.8rem, 2.4rem);
+
     text-align: center;
   }
 
@@ -105,13 +109,13 @@
   }
 
   &__minus {
-    border-right: 0.2rem solid $main_color;
     padding: 1rem 1.2rem 1rem 2rem;
+    border-right: 0.2rem solid $main_color;
   }
 
   &__plus {
-    border-left: 0.2rem solid $main_color;
     padding: 1rem 2rem 1rem 1.2rem;
+    border-left: 0.2rem solid $main_color;
   }
 
   &__count {

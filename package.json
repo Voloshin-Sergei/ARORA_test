@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.pug --open",
     "build": "parcel build src/index.pug --dist-dir public --no-source-maps --no-cache",
-    "lint": "npx stylelint **/*.scss"
+    "lint": "npx stylelint **/*.scss --fix"
   },
   "repository": {
     "type": "git",

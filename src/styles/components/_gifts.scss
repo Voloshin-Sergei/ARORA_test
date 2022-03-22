@@ -1,6 +1,7 @@
 .gifts {
   &__title {
     @include text($text_color-dark, 700, 3rem, 4.4rem);
+
     margin-bottom: 4rem;
   }
 }
