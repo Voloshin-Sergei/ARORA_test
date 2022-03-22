@@ -1,0 +1,21 @@
+- var sliderDish = [{'title': 'Чизбургер барбекю', 'desc': 'Соус коктейль, фарш из отборной говядины, маринованные огурцы, спелые томаты, сыр моцарелла, сыр чеддер, соус барбекю, хрустящий лук', 'img': '1', 'price': 'от 287 ₽'}, {'title': 'Бургер «Два сыра»', 'desc': 'Ароматная котлета из мраморной говядины с сыром чеддер и моцарелла, хрустящим луком, маринованными корнишонами, свежими томатами, соусом коктейль и барбекю в мягкой пшеничной булочке. Картофель и соус приобретается отдельно', 'img': '2', 'price': '387 ₽', 'label': 'new'}, {'title': 'Суши Эби', 'desc': 'Креветка', 'img': '3', 'price': '130 ₽', 'label': 'new'}, {'title': 'Чизбургер барбекю', 'desc': 'Соус коктейль, фарш из отборной говядины, маринованные огурцы, спелые томаты, сыр моцарелла, сыр чеддер, соус барбекю, хрустящий лук', 'img': '4', 'price': 'от 287 ₽'}, {'title': 'Бургер «Два сыра»', 'desc': 'Ароматная котлета из мраморной говядины с сыром чеддер и моцарелла, хрустящим луком, маринованными корнишонами, свежими томатами, соусом коктейль и барбекю в мягкой пшеничной булочке. Картофель и соус приобретается отдельно', 'img': '5', 'price': '387 ₽', 'label': 'new'}];
+
+mixin slide(...items)
+  each item in items
+    li.slide
+      img(src="./img/slider_"+item.img+".jpg", alt="dish").slide__img
+      if item.label
+        span.slide__label= item.label
+      div.slide__info
+        h4.slide__title= item.title
+        p.slide__desc= item.desc
+        include _buttons.pug
+        if item.label
+          +btn-colored(item.price, "bold", 'slide__btn')
+        else
+          +btn-bordered(item.price, "bold", 'slide__btn')
+
+section.slider
+  ul.slider__container
+    each item in sliderDish
+      +slide(item)

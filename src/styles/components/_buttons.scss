@@ -13,3 +13,18 @@
     @include text($main_color, 700, 1.8rem, 2.4rem);
   }
 }
+
+.btn-colored {
+  padding: 0.8rem 3.2rem;
+  background: $main_color;
+  border-radius: 4rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0 0 0 / 20%), 0 0 0.4rem rgba(0 0 0 / 16%), 0 0.2rem 0.4rem rgba(0 0 0 / 16%);
+
+  &--regular {
+    @include text($bg_color-light, 400, 1.6rem, 2.4rem);
+  }
+
+  &--bold {
+    @include text($bg_color-light, 700, 1.8rem, 2.4rem);
+  }
+}

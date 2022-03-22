@@ -6,6 +6,10 @@
   overflow: hidden;
   border-radius: 0.8rem;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &__img {
     width: auto;
     height: auto;
