@@ -1,4 +1,7 @@
 .recommend {
+  padding: 0 0 6.4rem 6.4rem;
+  overflow-x: hidden;
+
   &__title {
     @include text($text_color-dark, 700, 3rem, 4.4rem);
 

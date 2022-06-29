@@ -1,9 +1,11 @@
-.slider__container {
+.slider {
   display: flex;
   justify-content: space-between;
 }
 
 .slide {
+  display: flex;
+  flex-direction: column;
   position: relative;
   max-width: 29.8rem;
   margin-right: 1.6rem;
@@ -30,8 +32,8 @@
     display: flex;
     flex-direction: column;
     padding: 1.6rem 1.65rem;
-    overflow: hidden;
     background: $secondary_color;
+    overflow: hidden;
     border-radius: 0 0 0.8rem 0.8rem;
   }
 

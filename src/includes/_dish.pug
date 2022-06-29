@@ -1,12 +1,12 @@
 mixin dish(...items)
   each item in items
-    div.dish
+    li.dish
       img(src="./img/dish_"+item.img+".jpg", alt="pizza", width=185, height=215).dish__img
       if item.label
         span.dish__label(class= item.label == 'new' ? 'dish__label--new' : 'dish__label--action')= item.label
       div.dish__info
         h3.dish__title= item.title
-        button.btn__close.dish__btn: img(src="./img/icons/close.svg", alt="close btn", width=24, height=24)
+        button.dish__btn: img(src="./img/icons/close.svg", alt="close btn", width=24, height=24)
         p.dish__description= item.desc
         if item.price
           div.cost

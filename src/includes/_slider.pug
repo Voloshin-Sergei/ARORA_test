@@ -15,7 +15,7 @@ mixin slide(...items)
         else
           +btn-bordered(item.price, "bold", 'slide__btn')
 
-section.slider
-  ul.slider__container
-    each item in sliderDish
-      +slide(item)
+
+ul.slider
+  each item in sliderDish
+    +slide(item)
