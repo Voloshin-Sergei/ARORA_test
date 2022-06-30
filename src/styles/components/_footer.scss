@@ -1,4 +1,45 @@
 .footer {
   background-color: $bg_color-dark;
   padding: 3.2rem 6.4rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__navigation {
+    display: flex;
+    gap: 4rem;
+
+    &__list {
+      width: 185px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    &__link {
+      @include text($secondary_color, 400, 1.4rem, 2rem);
+
+      &:hover {
+        border-bottom: 1px solid $secondary_color;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6rem;
+    margin-bottom: 3.3rem;
+  }
+
+  &__copyright {
+    text-align: right;
+
+    &__text {
+      @include text($text_color-light, 400, 1.2rem, 1.6rem);
+
+      &--link {
+        color: $main_color;
+      }
+    }
+  }
 }

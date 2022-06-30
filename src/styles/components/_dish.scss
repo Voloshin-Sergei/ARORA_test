@@ -25,7 +25,7 @@
     box-shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 24%), 0 0.6rem 1.6rem rgb(0 0 0 / 32%);
 
     &--new {
-      @include text($bg_color-light, 500, 1.4rem, 1.8rem);
+      @include text($text_color-light, 500, 1.4rem, 1.8rem);
 
       text-transform: uppercase;
       background: $label_color-new;
@@ -81,7 +81,7 @@
 
   &__sale-price,
   &__sale-total-price {
-    @include text($text_color-light, 700, 1.8rem, 2.4rem);
+    @include text($text_color-darken, 700, 1.8rem, 2.4rem);
   }
 
   &__price,

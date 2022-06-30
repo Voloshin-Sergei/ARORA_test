@@ -25,7 +25,7 @@
     border-radius: 1.6rem;
     box-shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 24%), 0 0.6rem 1.6rem rgb(0 0 0 / 32%);
 
-    @include text($bg_color-light, 500, 1.4rem, 1.8rem);
+    @include text($text_color-light, 500, 1.4rem, 1.8rem);
   }
 
   &__info {

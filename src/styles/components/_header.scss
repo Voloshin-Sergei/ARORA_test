@@ -26,6 +26,10 @@
 
   &__place {
     @include text($main_color, 400, 1.2rem, 1.6rem);
+
+    &:hover {
+      color: lighten($main_color, 10%);
+    }
   }
 
   &__time {

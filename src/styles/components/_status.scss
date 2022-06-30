@@ -14,7 +14,7 @@
       bottom: 1.8rem;
       z-index: -1;
       width: 100%;
-      border-bottom: 4px dotted $text_color-light;
+      border-bottom: 4px dotted $text_color-darken;
       content: '';
     }
 
@@ -29,7 +29,7 @@
     }
 
     &__info {
-      @include text($text_color-light, 700, 3rem, 4.4rem);
+      @include text($text_color-darken, 700, 3rem, 4.4rem);
 
       &--active {
         color: $text_color-main;

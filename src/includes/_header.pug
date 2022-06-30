@@ -7,5 +7,6 @@ header.container
         li.locations__item
           div.location
             img(src="./img/icons/marker.svg", alt="location", width=16, height=16).location__icon
-            span.location__place #{item.place} #[span.location__time Круглосуточно]
+            a(href='#' title=`${item.place}`).location__place #{item.place}  #[span.location__time Круглосуточно]
+            
           p.location__phone #{item.phone}

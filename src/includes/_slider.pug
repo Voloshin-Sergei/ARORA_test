@@ -3,7 +3,7 @@
 mixin slide(...items)
   each item in items
     li.slide
-      img(src="./img/slider_"+item.img+".jpg", alt="dish").slide__img
+      img(src="./img/slider_"+item.img+".jpg", alt="dish", width=298, height=198).slide__img
       if item.label
         span.slide__label= item.label
       div.slide__info

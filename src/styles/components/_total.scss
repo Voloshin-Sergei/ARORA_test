@@ -11,13 +11,13 @@
   }
 
   &__sale {
-    @include text($text_color-light, 700, 1.8rem, 2.4rem);
+    @include text($text_color-darken, 700, 1.8rem, 2.4rem);
 
     text-decoration: line-through;
   }
 
   &__btn {
-    @include text($bg_color-light, 500, 1.8rem, 2.4rem);
+    @include text($text_color-light, 500, 1.8rem, 2.4rem);
     @include btn-colored(2rem);
 
     max-width: 33rem;
