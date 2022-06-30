@@ -3,16 +3,42 @@
   padding: 3.2rem 6.4rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1115px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.6rem 1.6rem 2.4rem 1.6rem;
+  }
 
   &__navigation {
     display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
 
+    @media (max-width: 1115px) {
+      margin-bottom: 3.2rem;
+    }
+
+    @media (max-width: 380px) {
+      gap: 1.6rem;
+    }
+
     &__list {
-      width: 185px;
+      width: 18.5rem;
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
+
+      @media (max-width: 1235px) {
+        width: 14.5rem;
+      }
+
+      @media (max-width: 371px) {
+        width: 12.6rem;
+      }
     }
 
     &__link {
@@ -21,21 +47,42 @@
       &:hover {
         border-bottom: 1px solid $secondary_color;
       }
+
+      @media (max-width: 371px) {
+        @include text($secondary_color, 400, 1.2rem, 1.6rem);
+      }
     }
   }
 
   &__social {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 1.6rem;
     margin-bottom: 3.3rem;
+
+    @media (max-width: 600px) {
+      justify-content: flex-start;
+    }
   }
 
   &__copyright {
     text-align: right;
 
+    @media (max-width: 1115px) {
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      text-align: left;
+    }
+
     &__text {
       @include text($text_color-light, 400, 1.2rem, 1.6rem);
+
+      @media (max-width: 371px) {
+        @include text($secondary_color, 400, 1rem, 1.2rem);
+      }
 
       &--link {
         color: $main_color;

@@ -4,16 +4,29 @@
   align-items: flex-end;
   padding: 0 6.4rem 7rem;
 
+  @media (max-width: 480px) {
+    padding: 0 1.7rem 6.4rem;
+  }
+
   &__coast {
     @include text($text_color-dark, 700, 1.8rem, 2.4rem);
 
     margin-bottom: 4rem;
+
+    @media (max-width: 480px) {
+      margin-bottom: 2.4rem;
+      font-size: 1.6rem;
+    }
   }
 
   &__sale {
     @include text($text_color-darken, 700, 1.8rem, 2.4rem);
 
     text-decoration: line-through;
+
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__btn {
@@ -21,5 +34,10 @@
     @include btn-colored(2rem);
 
     max-width: 33rem;
+
+    @media (max-width: 480px) {
+      min-width: 100%;
+      @include btn-colored(1.4rem);
+    }
   }
 }

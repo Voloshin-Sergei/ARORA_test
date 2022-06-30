@@ -4,9 +4,21 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1010px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__column-left {
     margin-right: 4rem;
+
+    @media (max-width: 1010px) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 1.6rem 3.2rem;
   }
 }
