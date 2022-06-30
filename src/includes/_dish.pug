@@ -1,22 +1,22 @@
 mixin dish(...items)
   each item in items
-    li.dish
+    div.dish
       img(src="./img/dish_"+item.img+".jpg", alt="pizza", width=185, height=215).dish__img
       if item.label
         span.dish__label(class= item.label == 'new' ? 'dish__label--new' : 'dish__label--action')= item.label
       div.dish__info
         h3.dish__title= item.title
-        button.dish__btn: img(src="./img/icons/close.svg", alt="close btn", width=24, height=24)
+        button.dish__close-btn(class= item.price ? 'dish__close-btn--cart' : ''): img(src="./img/icons/close.svg", alt="close btn", width=24, height=24)
         p.dish__description= item.desc
         if item.price
           div.cost
-            div.cost__pice-wrapper  
-              span.cost__sale-price= item.sale
+            div.cost__wrapper  
+              span.cost__price.cost__price--sale= item.sale
               span.cost__price #{item.price} ₽
             div.btn-group
               button.btn-group__minus -
               div.btn-group__count= item.count
               button.btn-group__plus +
-            div.cost__pice-wrapper  
-              span.cost__sale-total-price= item.totalSale
-              span.cost__total-price #{item.totalPrice} ₽
+            div.cost__wrapper  
+              span.cost__price.cost__price--sale= item.totalSale
+              span.cost__price #{item.totalPrice} ₽

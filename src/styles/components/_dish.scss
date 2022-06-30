@@ -2,13 +2,8 @@
   position: relative;
   display: flex;
   max-width: 86.1rem;
-  margin-bottom: 4rem;
   overflow: hidden;
   border-radius: 0.8rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &__img {
     width: auto;
@@ -48,22 +43,46 @@
     border-radius: 0 0.8rem 0.8rem 0;
   }
 
-  &__btn {
+  &__close-btn {
     position: absolute;
     top: 1.6rem;
     right: 1.6rem;
+
+    &--cart {
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
   }
 
   &__title {
     @include text($text_color-main, 700, 2.2rem, 3.2rem);
 
     margin-bottom: 1rem;
+
+    @media (max-width: 670px) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   &__description {
     @include text($text_color-secondary, 400, 1.4rem, 2rem);
 
     padding-bottom: 2.4rem;
+
+    @media (max-width: 670px) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 }
 
@@ -73,20 +92,23 @@
   align-items: center;
   align-self: flex-end;
 
-  &__pice-wrapper {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     text-align: right;
   }
 
-  &__sale-price,
-  &__sale-total-price {
-    @include text($text_color-darken, 700, 1.8rem, 2.4rem);
-  }
-
-  &__price,
-  &__total-price {
+  &__price {
     @include text($text_color-dark, 700, 1.8rem, 2.4rem);
+
+    &--sale {
+      color: $text_color-darken;
+    }
+
+    @media (max-width: 670px) {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
   }
 }
 
@@ -104,6 +126,10 @@
     @include text($text_color-secondary, 500, 1.8rem, 2.4rem);
 
     text-align: center;
+
+    @media (max-width: 670px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__minus,
@@ -115,16 +141,28 @@
   &__minus {
     padding: 1rem 1.2rem 1rem 2rem;
     border-right: 0.2rem solid $main_color;
+
+    @media (max-width: 670px) {
+      padding: 0.3rem 0.6rem 0.5rem 1.3rem;
+    }
   }
 
   &__plus {
     padding: 1rem 2rem 1rem 1.2rem;
     border-left: 0.2rem solid $main_color;
+
+    @media (max-width: 670px) {
+      padding: 0.3rem 1.05rem 0.5rem 0.65rem;
+    }
   }
 
   &__count {
     display: flex;
     justify-content: center;
     min-width: 5.2rem;
+
+    @media (max-width: 670px) {
+      min-width: 3.6rem;
+    }
   }
 }

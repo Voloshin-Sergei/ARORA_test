@@ -4,4 +4,5 @@ section.cart
   ul.cart__list
     include _dish.pug
     each item in cartDish
-      +dish(item)
+      li.cart__item
+        +dish(item)
