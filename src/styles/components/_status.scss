@@ -2,26 +2,42 @@
   padding: 0 6.4rem 4rem;
   background-color: $bg_color-light;
 
+  @media (max-width: 850px) {
+    padding: 0 0 3.2rem 1.6rem;
+  }
+
   &-list {
     position: relative;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     max-width: 93.7rem;
+    overflow-x: hidden;
+    gap: 1.7rem;
 
     &::after {
       position: absolute;
       bottom: 1.8rem;
       z-index: -1;
       width: 100%;
-      border-bottom: 4px dotted $text_color-darken;
+      border-bottom: 0.4rem dotted $text_color-darken;
       content: '';
+
+      @media (max-width: 730px) {
+        border-bottom: 0.2rem dotted $text_color-darken;
+        bottom: 1rem;
+      }
     }
 
     &__item {
       display: inline-block;
       padding: 0 2rem;
       background: $bg_color-light;
+      white-space: nowrap;
+
+      @media (max-width: 730px) {
+        padding: 0 0.8rem;
+      }
 
       &:first-child {
         padding-left: 0;
@@ -30,6 +46,11 @@
 
     &__info {
       @include text($text_color-darken, 700, 3rem, 4.4rem);
+
+      @media (max-width: 730px) {
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
 
       &--active {
         color: $text_color-main;
