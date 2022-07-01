@@ -11,9 +11,8 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-
     gap: 4rem;
+    justify-content: space-between;
 
     @media (max-width: 1010px) {
       flex-direction: column;

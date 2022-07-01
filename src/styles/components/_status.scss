@@ -10,10 +10,10 @@
     position: relative;
     z-index: 1;
     display: flex;
+    gap: 1.7rem;
     justify-content: space-between;
     max-width: 93.7rem;
     overflow-x: hidden;
-    gap: 1.7rem;
 
     &::after {
       position: absolute;
@@ -24,16 +24,16 @@
       content: '';
 
       @media (max-width: 730px) {
-        border-bottom: 0.2rem dotted $text_color-darken;
         bottom: 1rem;
+        border-bottom: 0.2rem dotted $text_color-darken;
       }
     }
 
     &__item {
       display: inline-block;
       padding: 0 2rem;
-      background: $bg_color-light;
       white-space: nowrap;
+      background: $bg_color-light;
 
       @media (max-width: 730px) {
         padding: 0 0.8rem;

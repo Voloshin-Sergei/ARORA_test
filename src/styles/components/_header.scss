@@ -1,8 +1,13 @@
 .header__container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 4rem 6.4rem 8rem;
   background-color: $bg_color-light;
+
+  @media (max-width: 900px) {
+    padding-bottom: 1.7rem;
+  }
 
   @media (max-width: 525px) {
     padding: 1.2rem 1.6rem 1.6rem;
@@ -25,11 +30,11 @@
 }
 
 .burger {
+  position: relative;
+  z-index: 2;
   display: none;
   width: 3.5rem;
   height: 3.5rem;
-  position: relative;
-  z-index: 2;
   overflow: hidden;
   cursor: pointer;
 
@@ -38,42 +43,43 @@
   }
 
   &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 3.5rem;
     height: 0.5rem;
     background: $text_color-main;
     border-radius: 1.3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
 
     &::before {
-      background: $text_color-main;
-      border-radius: 1.3rem;
       position: absolute;
-      width: 3.5rem;
-      height: 0.5rem;
-      content: '';
       top: 1rem;
-    }
-    &::after {
-      background: $text_color-main;
-      border-radius: 1.3rem;
-      position: absolute;
       width: 3.5rem;
       height: 0.5rem;
+      background: $text_color-main;
+      border-radius: 1.3rem;
       content: '';
+    }
+
+    &::after {
+      position: absolute;
       bottom: 1rem;
+      width: 3.5rem;
+      height: 0.5rem;
+      background: $text_color-main;
+      border-radius: 1.3rem;
+      content: '';
     }
   }
 }
 
 .locations {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
 
   @media (max-width: 1040px) {
     justify-content: revert;

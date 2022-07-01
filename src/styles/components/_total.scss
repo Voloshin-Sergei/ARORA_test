@@ -37,6 +37,7 @@
 
     @media (max-width: 480px) {
       min-width: 100%;
+
       @include btn-colored(1.4rem);
     }
   }

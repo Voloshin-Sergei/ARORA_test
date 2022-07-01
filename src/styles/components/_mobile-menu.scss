@@ -1,27 +1,42 @@
 .mobile-menu {
-  overflow-x: hidden;
-  display: flex;
-  width: 100%;
+  display: none;
   justify-content: space-between;
+  width: 100%;
+  padding-bottom: 3.6rem;
 
-  &__item {
-    background: $bg_color-dark;
+  @media (max-width: 525px) {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
     padding: 0.8rem 1.7rem;
+    background: $bg_color-dark;
     border-radius: 2.5rem;
 
     &--left {
-      border-radius: 0px 25px 25px 0px;
+      border-radius: 0 25px 25px 0;
     }
 
     &--right {
       background: $main_color;
-      border-radius: 25px 0px 0px 25px;
+      border-radius: 25px 0 0 25px;
+    }
+
+    &--cart {
+      padding: 1rem 2.6rem;
+    }
+
+    &--exclude {
+      padding: 0.8rem 2rem;
     }
   }
 
-  &__link {
-    &--phone {
-      background-image: url('../img/icons/phone.svg');
-    }
+  &__icon-cart {
+    margin-right: 0.8rem;
+  }
+
+  &__cost {
+    @include text($text_color-light, 700, 1.4rem, 2rem);
   }
 }

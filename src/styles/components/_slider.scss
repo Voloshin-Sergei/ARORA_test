@@ -4,16 +4,16 @@
 }
 
 .slide {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   max-width: 29.8rem;
   margin-right: 1.6rem;
 
   &__img {
+    object-fit: contain;
     overflow: hidden;
     border-radius: 0.8rem 0.8rem 0 0;
-    object-fit: contain;
   }
 
   &__label {
@@ -30,6 +30,7 @@
 
     @media (max-width: 768px) {
       @include text($text_color-light, 500, 1.2rem, 1.6rem);
+
       padding: 0.5rem 1.4rem;
     }
   }
@@ -38,8 +39,8 @@
     display: flex;
     flex-direction: column;
     padding: 1.6rem 1.65rem;
-    background: $secondary_color;
     overflow: hidden;
+    background: $secondary_color;
     border-radius: 0 0 0.8rem 0.8rem;
   }
 
@@ -50,6 +51,7 @@
 
     @media (max-width: 768px) {
       @include text($text_color-main, 700, 1.4rem, 2rem);
+
       margin-bottom: 1rem;
     }
   }
@@ -61,6 +63,7 @@
 
     @media (max-width: 768px) {
       @include text($text_color-main, 400, 1.2rem, 1.6rem);
+
       margin-bottom: 1rem;
     }
   }
