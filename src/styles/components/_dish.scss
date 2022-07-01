@@ -2,13 +2,29 @@
   position: relative;
   display: flex;
   max-width: 86.1rem;
+  min-width: 100%;
   overflow: hidden;
   border-radius: 0.8rem;
 
+  @media (max-width: 600px) {
+    height: 10rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 6rem;
+    border-radius: 0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.16),
+      0px 2px 4px rgba(0, 0, 0, 0.16);
+  }
+
   &__img {
-    width: auto;
-    height: auto;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 480px) {
+      filter: brightness(40%);
+    }
   }
 
   &__label {
@@ -18,6 +34,10 @@
     padding: 0.7rem 1.6rem;
     border-radius: 1.6rem;
     box-shadow: 0 0.1rem 0.6rem rgb(0 0 0 / 24%), 0 0.6rem 1.6rem rgb(0 0 0 / 32%);
+
+    @media (max-width: 600px) {
+      display: none;
+    }
 
     &--new {
       @include text($text_color-light, 500, 1.4rem, 1.8rem);
@@ -33,6 +53,27 @@
     }
   }
 
+  &__cover {
+    position: relative;
+    min-width: 18.5rem;
+
+    @media (max-width: 600px) {
+      min-width: 15rem;
+    }
+  }
+
+  &__mobile-title {
+    display: none;
+    position: absolute;
+    @include text($text_color-light, 400, 1.2rem, 1.6rem);
+    top: 2.2rem;
+    left: 1.6rem;
+
+    @media (max-width: 480px) {
+      display: block;
+    }
+  }
+
   &__info {
     position: relative;
     display: flex;
@@ -41,12 +82,26 @@
     padding: 1.6rem 1.6rem 0.5rem 4rem;
     background: $secondary_color;
     border-radius: 0 0.8rem 0.8rem 0;
+
+    @media (max-width: 600px) {
+      padding: 1.4rem 1.6rem;
+    }
+
+    @media (max-width: 480px) {
+      border-radius: 0;
+      background: $bg_color-light;
+      min-width: 17rem;
+    }
   }
 
   &__close-btn {
     position: absolute;
     top: 1.6rem;
     right: 1.6rem;
+
+    @media (max-width: 480px) {
+      top: 1.8rem;
+    }
 
     &--cart {
       @media (max-width: 600px) {
@@ -65,7 +120,7 @@
       line-height: 2.4rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       display: none;
     }
   }
@@ -92,10 +147,23 @@
   align-items: center;
   align-self: flex-end;
 
+  @media (max-width: 480px) {
+    align-self: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     text-align: right;
+
+    &--mobile {
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
   }
 
   &__price {
@@ -143,7 +211,7 @@
     border-right: 0.2rem solid $main_color;
 
     @media (max-width: 670px) {
-      padding: 0.3rem 0.6rem 0.5rem 1.3rem;
+      padding: 0.2rem 0.6rem 0.4rem 1.3rem;
     }
   }
 
@@ -152,7 +220,7 @@
     border-left: 0.2rem solid $main_color;
 
     @media (max-width: 670px) {
-      padding: 0.3rem 1.05rem 0.5rem 0.65rem;
+      padding: 0.3rem 1.05rem 0.3rem 0.65rem;
     }
   }
 

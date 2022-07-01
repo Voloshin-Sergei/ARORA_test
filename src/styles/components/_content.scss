@@ -1,6 +1,14 @@
 .content {
   padding: 0 6.4rem 6.4rem;
 
+  @media (max-width: 600px) {
+    padding: 0 5rem 6.4rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 0 6.4rem;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -8,17 +16,7 @@
     gap: 4rem;
 
     @media (max-width: 1010px) {
-      flex-wrap: wrap;
+      flex-direction: column;
     }
-  }
-
-  &__column-left {
-    @media (max-width: 1010px) {
-      margin-bottom: 3.2rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 1.6rem 3.2rem;
   }
 }

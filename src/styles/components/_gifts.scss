@@ -3,5 +3,16 @@
     @include text($text_color-dark, 700, 3rem, 4.4rem);
 
     margin-bottom: 4rem;
+
+    @media (max-width: 600px) {
+      margin-bottom: 1.6rem;
+    }
+
+    @media (max-width: 480px) {
+      margin-left: 1.6rem;
+
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
   }
 }

@@ -1,9 +1,17 @@
 .cart {
   margin-bottom: 6.4rem;
 
+  @media (max-width: 600px) {
+    margin-bottom: 1.6rem;
+  }
+
   .cart__list {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @media (max-width: 600px) {
+      gap: 0.4rem;
+    }
   }
 }

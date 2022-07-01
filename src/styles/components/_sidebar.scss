@@ -8,6 +8,10 @@
   box-shadow: 0 0.1rem 0.1rem rgba(0 0 0 / 25%), 0 0 0.4rem rgba(0 0 0 / 16%),
     0 0.4rem 0.6rem rgba(0 0 0 / 16%);
 
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
+
   &__points {
     @include text($text_color-dark, 700, 2.2rem, 3.2rem);
 
