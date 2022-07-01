@@ -1,7 +1,7 @@
 header.container
   div.header__container
     a(href="#").logo
-      img(src="./img/logo.png", alt="logo", width=225, height=70)
+      img(src="./img/logo.png", alt="logo", width=225).logo__img
     ul.locations
       each item in [{'place': 'Ховрино', 'phone': "+7 (495) 980-66-22"}, {'place': 'Измайлово', 'phone': "+7 (495) 730-55-66"}, {'place': 'Мытищи', 'phone': "+7 (495) 500-40-40"}, {'place': 'Хор.-Мневники', 'phone': "+7 (495) 980-66-22"}]
         li.locations__item
@@ -10,3 +10,6 @@ header.container
             a(href='#' title=`${item.place}`).location__place #{item.place}  #[span.location__time Круглосуточно]
             
           p.location__phone #{item.phone}
+    div.burger
+      span.burger__line
+  include _mobile-menu.pug

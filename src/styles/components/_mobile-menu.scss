@@ -1,0 +1,27 @@
+.mobile-menu {
+  overflow-x: hidden;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &__item {
+    background: $bg_color-dark;
+    padding: 0.8rem 1.7rem;
+    border-radius: 2.5rem;
+
+    &--left {
+      border-radius: 0px 25px 25px 0px;
+    }
+
+    &--right {
+      background: $main_color;
+      border-radius: 25px 0px 0px 25px;
+    }
+  }
+
+  &__link {
+    &--phone {
+      background-image: url('../img/icons/phone.svg');
+    }
+  }
+}

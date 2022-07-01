@@ -3,16 +3,85 @@
   justify-content: space-between;
   padding: 4rem 6.4rem 8rem;
   background-color: $bg_color-light;
+
+  @media (max-width: 525px) {
+    padding: 1.2rem 1.6rem 1.6rem;
+  }
 }
 
 .logo {
   margin-right: 11.3rem;
+
+  @media (max-width: 525px) {
+    width: 14.5rem;
+    margin-right: 0;
+  }
+
+  &__img {
+    @media (max-width: 525px) {
+      width: 14.5rem;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media (max-width: 902px) {
+    display: block;
+  }
+
+  &__line {
+    width: 3.5rem;
+    height: 0.5rem;
+    background: $text_color-main;
+    border-radius: 1.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      background: $text_color-main;
+      border-radius: 1.3rem;
+      position: absolute;
+      width: 3.5rem;
+      height: 0.5rem;
+      content: '';
+      top: 1rem;
+    }
+    &::after {
+      background: $text_color-main;
+      border-radius: 1.3rem;
+      position: absolute;
+      width: 3.5rem;
+      height: 0.5rem;
+      content: '';
+      bottom: 1rem;
+    }
+  }
 }
 
 .locations {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: 1040px) {
+    justify-content: revert;
+  }
+
+  @media (max-width: 902px) {
+    display: none;
+  }
 }
 
 .location {
