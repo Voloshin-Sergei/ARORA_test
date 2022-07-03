@@ -2,7 +2,7 @@
 
 section.cart
   ul.cart__list
-    include _dish.pug
+    include ./../partials/_dish.pug
     each item in cartDish
       li.cart__item
         +dish(item)

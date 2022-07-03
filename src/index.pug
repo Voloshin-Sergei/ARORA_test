@@ -1,5 +1,5 @@
 doctype html
-html(lang="ru")
+html(lang="ru-Ru")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -7,11 +7,12 @@ html(lang="ru")
     link(rel="stylesheet", href="styles/main.scss")
     title Vivat Pizza
   body
-    include includes/_header.pug
+    include includes/blocks/_header.pug
     main.container
-      include includes/_status.pug
-      include includes/_content.pug
-      include includes/_recommend.pug
-      include includes/_divider.pug
-      include includes/_total.pug
-    include includes/_footer.pug
+      include includes/blocks/_modal.pug
+      include includes/blocks/_status.pug
+      include includes/blocks/_content.pug
+      include includes/blocks/_recommend.pug
+      include includes/blocks/_divider.pug
+      include includes/blocks/_total.pug
+    include includes/blocks/_footer.pug

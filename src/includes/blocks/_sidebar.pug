@@ -5,7 +5,7 @@ aside.sidebar
   form.promo(action="submit")
     h3.promo__title Промокод
     input(type="text", value="Input text").promo__input
-    include _buttons.pug
+    include ./../partials/_buttons.pug
     +btn-bordered("Применить", "regular", "promo__btn")
   div.sidebar__coast Сумма заказа: <span class="sidebar__sale">4200</span> 3580 ₽
   button.sidebar__btn Далее

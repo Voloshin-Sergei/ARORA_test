@@ -1,0 +1,6 @@
+mixin dish-properties(items)
+  ul.dish-properties
+    each item in items
+      li.dish-properties__item(class= item.default ? 'dish-properties__item--active' : '')
+        span.dish-properties__type= item.title
+        span.dish-properties__weight= `${ item.value}`

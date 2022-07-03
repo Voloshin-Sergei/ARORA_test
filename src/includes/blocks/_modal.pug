@@ -1,0 +1,35 @@
+- var dishSizes = [{'title': 'Большая', 'value': ' (36 см)', 'default': false}, {'title': 'Средняя', 'value': ' (31 см)', 'default': true}, {'title': 'Маленькая', 'value': ' (20 см)' , 'default': false}];
+- var dishType = [{'title': 'Тонкое', 'value': ' (565 г)', 'default': false}, {'title': 'Пышное', 'value': ' (820 г)', 'default': true}];
+- var dishIngredients = [{'title': 'Говядина варёно-копчёная 50 г', 'count': 0, 'price': 70, 'img': '1', 'check': false }, {'title': 'Филе копченого цыпленка, 50 г', 'count': 1, 'price': 70, 'img': '2', 'check': true }, {'title': 'Фарш из мраморной говядины, 50 г', 'count': 2, 'price': 99, 'img': '3', 'check': true }, {'title': 'Карбонад из свинины, 50 г', 'count': 2, 'price': 70, 'img': '4', 'check': false }, {'title': 'Карбонад из свинины, 50 г', 'count': 2, 'price': 70, 'img': '4', 'check': false }, {'title': 'Карбонад из свинины, 50 г', 'count': 2, 'price': 70, 'img': '4', 'check': false }, {'title': 'Карбонад из свинины, 50 г', 'count': 2, 'price': 70, 'img': '4', 'check': false }, {'title': 'Карбонад из свинины, 50 г', 'count': 2, 'price': 70, 'img': '4', 'check': false }, {'title': 'Карбонад из свинины, 50 г', 'count': 2, 'price': 70, 'img': '4', 'check': false }];
+
+.modal
+  div.modal__content
+    div.modal__content__left-column
+      div
+        img(src="./img/modal/pizza.jpg", alt="pizza").modal__img
+      include ./../partials/_dish-properties.pug
+      +dish-properties(dishSizes)
+      +dish-properties(dishType)
+    div.modal__content__right-column
+      h3.modal__title Чизбургер барбекю
+      div.modal__description
+        p Состав: Соус коктейль, фарш из отборной говядины, маринованные огурцы, спелые томаты, сыр моцарелла, сыр чеддер, соус барбекю, хрустящий лук.
+        p На 100 г. продукта: 
+        p K – 79.8 ккал;  Б – 2.4 г;  Ж – 5.4 г;  У – 5.4 г
+      div.ingredients
+        p.ingredients__title Добавить ингредиенты
+        ul.ingredients__list
+          each item in dishIngredients
+            li.ingredients__item
+              div.ingredients__item__name
+                input(class="ingredients__item__checkbox", type="checkbox", name=`${item.title}`, id=`${item.title}`, checked=item.check)
+                label(for=`${item.title}`)
+                p.ingredients__item__info= item.title
+              div.ingredients__item__summary
+                div.ingredients__item__price
+                  if item.count
+                    p.ingredients__item__info.ingredients__item__info--price= `${item.count} x`
+                  p.ingredients__item__info.ingredients__item__info--price= `${item.price} ₽` 
+                img(src="./img/modal/ingredient_"+item.img+".png", alt=`${item.title}`).ingredients__item__icon
+                p.ingredients__item__info.ingredients__item__info--price= `${item.price * item.count} ₽`
+      button.modal__btn В корзину • <span class="modal__total-cost">940</span> • 659 ₽

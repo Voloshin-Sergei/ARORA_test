@@ -2,7 +2,7 @@ mixin dish(...items)
   each item in items
     div.dish
       div.dish__cover
-        img(src="./img/dish_"+item.img+".jpg", alt="pizza").dish__img
+        img(src="./img/dishes/dish_"+item.img+".jpg", alt=`${item.title}`).dish__img
         h3.dish__mobile-title= item.title
         if item.label
           span.dish__label(class= item.label == 'new' ? 'dish__label--new' : 'dish__label--action')= item.label

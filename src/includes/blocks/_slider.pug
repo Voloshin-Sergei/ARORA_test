@@ -3,13 +3,13 @@
 mixin slide(...items)
   each item in items
     li.slide
-      img(src="./img/slider_"+item.img+".jpg", alt="dish").slide__img
+      img(src="./img/slider/slide_"+item.img+".jpg", alt=`${item.title}`).slide__img
       if item.label
         span.slide__label= item.label
       div.slide__info
         h4.slide__title= item.title
         p.slide__desc= item.desc
-        include _buttons.pug
+        include ./../partials/_buttons.pug
         if item.label
           +btn-colored(item.price, "bold", 'slide__btn')
         else
