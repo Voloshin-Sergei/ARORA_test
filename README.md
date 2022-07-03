@@ -9,7 +9,7 @@ Watch [DEMO](https://voloshin-sergei.github.io/ARORA_test/public/).
 - SCSS
 - Stylelint
 
-## 🛠 what is done
+## 🛠 What is done
 
 - Adaptive layout landing page
 - Modal window
