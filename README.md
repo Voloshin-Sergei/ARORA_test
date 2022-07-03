@@ -1,4 +1,4 @@
-# Test task for Aurora company
+# Test task for Arora company
 
 Watch [DEMO](https://voloshin-sergei.github.io/ARORA_test/public/).
 
